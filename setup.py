@@ -1,0 +1,33 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="llm-pull",
+    description="LLMs pull of prior knowledge in subjective tasks",
+    author="Georgios Chochlakis",
+    author_email="chochlak@usc.edu",
+    packages=find_packages(),
+    install_requires=[
+        "torch",
+        "transformers",
+        "legm @ git+https://github.com/gchochla/legm.git@main",
+        "ember @ git+https://github.com/gchochla/ember.git@42456fc765a67decd98b2befd8e33c1baf8b5b4b",
+        "gridparse @ git+https://github.com/gchochla/gridparse.git@main",  
+        "langcodes",
+        "language_data",
+        "pandas",
+        "scikit-learn",
+        "openai",
+        "tenacity",
+        "python-dotenv",
+        "ekphrasis",
+        "accelerate",
+        "bitsandbytes",
+        "sentence-transformers",
+        "matplotlib",
+        "seaborn",
+        "nltk",
+        "gensim",
+        "ai2-olmo",
+    ],
+    extras_require={"dev": ["black", "pytest"]},
+)
